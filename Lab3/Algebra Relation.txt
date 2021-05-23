@@ -1,0 +1,12 @@
+/* 2)π model σ color = 'true' Printer */
+/* 3)model,price PC ∪ π model,price laptop ∪ π model,price Printer*/
+/* 4)π maker σ type = 'laptop' and type ≠ 'PC' Product*/
+/* 5)π speed PC ∩ πspeed laptop*/
+/* 6)π maker, price ( Product ⨝ Product.model = PC.model PC )*/
+/* 7)π maker σ hd > 100 ( Product ⟕ Product.model = laptop.model laptop )*/
+/* 8)π model, price σ price ≤ 600 laptop*/
+/* 9)π model, price, type σ price < 100 and color = 'true' Printer*/
+/* 10)π laptop.model, screen σ maker = 'L' ( laptop ⟕ laptop.model = Product.model Product*/
+/* 11)π PC.model, price σ maker = 'A' ∧ speed ≥ 280 ( PC ⨝ PC.model = Product.model Product )*/
+/* ERROR π a.model, a.maker, a.type, b.model, b.maker, b.type σ a.maker = b.maker and a.type ≠ b.type ( ρ a Product ⨯ a.model = b.model ρ b Product )*/
+π maker, p σ p ≥ 2 γ Product.maker; COUNT(model)→p Product

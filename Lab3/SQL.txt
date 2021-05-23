@@ -1,0 +1,31 @@
+/* select model
+from PC
+where speed>150 */
+/* select maker 
+from Product
+where type='laptop' and type!='PC'*/
+/*select maker, price
+from Product
+inner join PC on Product.model=PC.model*/
+/*select maker
+from Product
+inner join laptop on Product.model=laptop.model
+where hd>100*/
+/*select model, price
+from laptop
+where price<=600*/
+/*select model, price, type
+from Printer
+where price<100 and color='true'*/
+/*select laptop.model, screen
+from laptop inner join Product on laptop.model=Product.model
+where maker='L'*/
+/*select PC.model, price
+from PC inner join Product on PC.model=Product.model
+where maker='L' and speed>=280*/
+/* ERROR select a.model, a.maker, a.type, b.model, b.maker, b.type
+from Product as a
+inner join
+		 Product as b
+		 on a.model=b.model
+where a.maker=b.maker and a.type!=b.type*/
